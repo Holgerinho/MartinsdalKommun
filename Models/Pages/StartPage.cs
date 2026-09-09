@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using EPiServer.Core;
+using EPiServer.DataAbstraction;
+using EPiServer.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace MartinsdalKommun.Models.Pages
 {
@@ -9,20 +12,11 @@ namespace MartinsdalKommun.Models.Pages
         AvailableInEditMode = true)]
     public class StartPage : PageData
     {
-        [CultureSpecific]
         [Display(
-            Name = "Title",
-            Description = "The title of the start page.",
+            Name = "Main Content Area",
+            Description = "The main content area of the start page.",
             GroupName = SystemTabNames.Content,
-            Order = 1)]
-        public virtual string Title { get; set; }
-        
-        [CultureSpecific]
-        [Display(
-            Name = "Main Body",
-            Description = "The main body of the start page.",
-            GroupName = SystemTabNames.Content,
-            Order = 2)]
-        public virtual XhtmlString MainBody { get; set; }
+            Order = 10)]
+        public virtual ContentArea MainContentArea { get; set; }
     }
 }
