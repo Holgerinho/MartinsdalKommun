@@ -5,6 +5,12 @@ using EPiServer.Web;
 
 namespace MartinsdalKommun.Models.Blocks
 {
+    [ContentType(
+        DisplayName = "Kontaktblock",
+        GUID = "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+        Description = "Ett block som visar kontaktinformation.",
+        AvailableInEditMode = true)]
+
     public class ContactBlock : BlockData
     {
         [CultureSpecific]
