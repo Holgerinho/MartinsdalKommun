@@ -17,6 +17,6 @@ namespace MartinsdalKommun.Models.Pages
             Description = "The main content area of the start page.",
             GroupName = SystemTabNames.Content,
             Order = 10)]
-        public virtual ContentArea MainContentArea { get; set; }
+        public virtual ContentArea? MainContentArea { get; set; }
     }
 }

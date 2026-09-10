@@ -1,6 +1,7 @@
-﻿using MartinsdalKommun.Models.Pages;
+﻿using EPiServer.Web.Mvc;
+using MartinsdalKommun.Models.Pages;
+using MartinsdalKommun.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using EPiServer.Web.Mvc;
 
 namespace MartinsdalKommun.Controllers
 {
@@ -8,6 +9,8 @@ namespace MartinsdalKommun.Controllers
     {
         public IActionResult Index(StartPage currentPage)
         {
+
+
             return View(currentPage);
         }
     }
