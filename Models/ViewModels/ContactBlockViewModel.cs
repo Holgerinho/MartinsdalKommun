@@ -7,7 +7,7 @@ namespace MartinsdalKommun.Models.ViewModels
 {
     public class ContactBlockViewModel
     {
-     
+
         public ContentReference? Image { get; set; }
 
         public string? Heading { get; set; }
@@ -19,6 +19,8 @@ namespace MartinsdalKommun.Models.ViewModels
         public string? Phone { get; set; }
 
         public string? Email { get; set; }
+
+
 
     }
 }
