@@ -1,0 +1,9 @@
+﻿@using EPiServer.Web.Routing
+@model MartinsdalKommun.Models.ViewModels.TeaserBlockViewModel
+
+<div class="contact">
+	<img epi-property="@Model.Image" />
+	<h2 epi-property="@Model.Heading">@Model.Heading</h2>
+	<p epi-property="@Model.Text">@Model.Text</p>
+	<a href="@UrlResolver.Current.GetUrl(Model.Link)"> </a>
+</div>
