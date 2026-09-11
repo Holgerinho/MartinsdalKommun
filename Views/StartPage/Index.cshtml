@@ -1,11 +1,10 @@
-﻿
-
-@model MartinsdalKommun.Models.Pages.StartPage
-@inject EPiServer.IContentLoader ContentLoader
-@using EPiServer.Core
+﻿@using EPiServer.Core
 @using MartinsdalKommun.Models.Blocks
 @using MartinsdalKommun.Models.ViewModels
 @using System.Linq
+@inject EPiServer.IContentLoader ContentLoader
+
+@model MartinsdalKommun.Models.Pages.StartPage
 
 <div epi-property="@Model.MainContentArea" class="content-area">
     @if (Model.MainContentArea?.Items?.Any() == true)
@@ -16,7 +15,7 @@
 
             @if (block is ContactBlock contactBlock)
             {
-                var vm = new ContactBlockViewModel
+                var viewModel = new ContactBlockViewModel
                 {
                     Image = contactBlock.Image,
                     Heading = contactBlock.Heading,
@@ -27,7 +26,7 @@
                 };
 
                 <div epi-property-item="@item" class="content-item">
-                    @await Html.PartialAsync("~/Views/Shared/Blocks/ContactBlock/Default.cshtml", vm)
+                    @await Html.PartialAsync("~/Views/Shared/Blocks/ContactBlock/Default.cshtml", viewModel)
                 </div>
             }
         }

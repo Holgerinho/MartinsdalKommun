@@ -1,0 +1,17 @@
+﻿@using MartinsdalKommun.Models.ViewModels
+
+@model IPageViewModel<PageData>
+<!DOCTYPE html>
+<html>
+<body>
+
+    @await Html.PartialAsync("~/Views/Shared/Header.cshtml")
+
+    <main>
+        @RenderBody()
+    </main>
+
+    @await Html.PartialAsync("~/Views/Shared/Footer.cshtml")
+
+</body>
+</html>
