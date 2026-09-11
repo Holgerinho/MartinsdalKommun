@@ -8,7 +8,7 @@
 
 <div epi-property="@Model.Title">@Model.Title</div>
 
-<div epi-property="@Model.MainText">@Html.Raw(Model.MainText)</div>
+<div epi-property="@Model.MainText">@Html.PropertyFor(x => x.MainText)</div>
 
 <div epi-property="@Model.MainContentArea" class="content-area">
 	@if (Model.MainContentArea?.Items?.Any() == true)

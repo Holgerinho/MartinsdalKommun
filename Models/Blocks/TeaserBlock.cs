@@ -7,7 +7,7 @@ namespace MartinsdalKommun.Models.Blocks
         GUID = "f1c2e3d4-5678-90ab-cdef-1234567890ab", 
         Description = "Ett puffblock med en bild, rubrik och beskrivning.", 
         AvailableInEditMode = true)]
-    public class TeaserBlock
+    public class TeaserBlock : BlockData
     {
         [Display(
             Name = "Rubrik",
