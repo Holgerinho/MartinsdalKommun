@@ -1,0 +1,34 @@
+﻿@using EPiServer.Core
+@using MartinsdalKommun.Models.Blocks
+@using MartinsdalKommun.Models.ViewModels
+
+@inject EPiServer.IContentLoader ContentLoader
+
+@model MartinsdalKommun.Models.Pages.LandingPage
+
+<div epi-property ="@Model.Title">@Model.Title</div>
+
+<div epi-property="@Model.MainContentArea" class="content-area">
+	@if (Model.MainContentArea?.Items?.Any() == true)
+	{
+		@foreach (var item in Model.MainContentArea.Items)
+		{
+			var block = ContentLoader.Get<IContent>(item.ContentLink);
+			@if (block is ContactBlock contactBlock)
+			{
+				var viewModel = new ContactBlockViewModel
+				{
+					Image = contactBlock.Image,
+					Heading = contactBlock.Heading,
+					Subheading = contactBlock.Subheading,
+					Text = contactBlock.Text,
+					Phone = contactBlock.Phone,
+					Email = contactBlock.Email
+				};
+				<div epi-property-item="@item" class="content-item">
+					@await Html.PartialAsync("~/Views/Shared/Blocks/ContactBlock/Default.cshtml", viewModel)
+				</div>
+			}
+		}
+	}	
+</div>

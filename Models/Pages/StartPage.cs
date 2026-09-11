@@ -12,6 +12,8 @@ namespace MartinsdalKommun.Models.Pages
         AvailableInEditMode = true)]
     public class StartPage : PageData
     {
+        
+        
         [Display(
             Name = "Main Content Area",
             Description = "The main content area of the start page.",
