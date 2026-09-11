@@ -1,0 +1,23 @@
+﻿@using MartinsdalKommun.Models.ViewModels
+@using EPiServer.Core
+
+@model dynamic
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    @{
+        await Html.RenderPartialAsync("~/Views/Shared/Header.cshtml");
+    }
+
+    <main>
+        @RenderBody()
+    </main>
+
+    @{
+        await Html.RenderPartialAsync("~/Views/Shared/Footer.cshtml");
+    }
+
+</body>
+</html>
