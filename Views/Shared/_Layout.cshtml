@@ -15,6 +15,9 @@
         @RenderBody()
     </main>
 
+    @{
+        await Html.RenderPartialAsync("~/Views/Shared/Footer.cshtml");
+    }
 
 </body>
 </html>
