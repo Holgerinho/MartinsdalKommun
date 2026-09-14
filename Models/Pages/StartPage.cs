@@ -1,4 +1,4 @@
-﻿using EPiServer.Core;
+using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using MartinsdalKommun.Infrastructure;
@@ -13,8 +13,8 @@ namespace MartinsdalKommun.Models.Pages
         AvailableInEditMode = true)]
     public class StartPage : PageData
     {
-        
-        
+
+
         [Display(
             Name = "Innehållsområde",
             Description = "Innehållsområdet på startsidan.",
@@ -25,23 +25,23 @@ namespace MartinsdalKommun.Models.Pages
         [Display(
             Name = "Rubrik sidhuvud",
             Description = "Rubriken för sidhuvudet.",
-            GroupName = SystemTabNames.Content,
+            GroupName = SiteTabNames.Header,
             Order = 20)]
         [CultureSpecific]
         public virtual string? HeaderTitle { get; set; }
 
         [Display(
             Name = "Sidhuvud",
-            Description = "Sidhuvudets innehåll.",
-            GroupName = SystemTabNames.Content,
+            Description = "Sidhuvudets innehål.",
+            GroupName = SiteTabNames.Header,
             Order = 30)]
         [CultureSpecific]
         public virtual string? HeaderText { get; set; }
 
         [Display(
             Name = "Sidfot",
-            Description = "Sidfotens innehåll.",
-            GroupName = SystemTabNames.Content,
+            Description = "Sidfotens innehål.",
+            GroupName = SiteTabNames.Footer,
             Order = 40)]
         public virtual XhtmlString? FooterText { get; set; }
     }
