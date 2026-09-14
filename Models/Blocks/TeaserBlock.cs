@@ -34,6 +34,6 @@ namespace MartinsdalKommun.Models.Blocks
         [Display(
             GroupName = SystemTabNames.Content,
             Order = 40)]
-        public virtual PageReference Link { get; set; }
+        public virtual Url Link { get; set; }
     }
 }
