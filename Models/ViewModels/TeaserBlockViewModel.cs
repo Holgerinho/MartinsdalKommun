@@ -1,4 +1,6 @@
-﻿namespace MartinsdalKommun.Models.ViewModels
+﻿using EPiServer.Web;
+
+namespace MartinsdalKommun.Models.ViewModels
 {
     public class TeaserBlockViewModel
     {
@@ -9,6 +11,6 @@
 
         public ContentReference? Image { get; set; }
 
-        public PageReference? Link { get; set; }
+        public Url? Link { get; set; }
     }
 }
