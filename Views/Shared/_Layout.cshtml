@@ -1,14 +1,20 @@
-﻿@using MartinsdalKommun.Models.ViewModels
-@using EPiServer.Core
+﻿@using EPiServer.Core
+@using MartinsdalKommun.Models.Pages
+@using MartinsdalKommun.Models.ViewModels
+@inject EPiServer.IContentLoader ContentLoader
 
 @model dynamic
+
+@{var startPage = ContentLoader.Get<StartPage>
+(ContentReference.StartPage);}
 
 <!DOCTYPE html>
 <html>
 <body>
 
+
     @{
-        await Html.RenderPartialAsync("~/Views/Shared/Header.cshtml");
+        await Html.RenderPartialAsync("~/Views/Shared/Header.cshtml", startPage);
     }
 
     <main>
@@ -16,7 +22,7 @@
     </main>
 
     @{
-        await Html.RenderPartialAsync("~/Views/Shared/Footer.cshtml");
+        await Html.RenderPartialAsync("~/Views/Shared/Footer.cshtml", startPage);
     }
 
 </body>

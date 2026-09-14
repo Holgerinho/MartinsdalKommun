@@ -1,6 +1,7 @@
 ﻿using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
+using MartinsdalKommun.Infrastructure;
 using System.ComponentModel.DataAnnotations;
 
 namespace MartinsdalKommun.Models.Pages
@@ -15,10 +16,33 @@ namespace MartinsdalKommun.Models.Pages
         
         
         [Display(
-            Name = "Main Content Area",
-            Description = "The main content area of the start page.",
+            Name = "Innehållsområde",
+            Description = "Innehållsområdet på startsidan.",
             GroupName = SystemTabNames.Content,
             Order = 10)]
         public virtual ContentArea? MainContentArea { get; set; }
+
+        [Display(
+            Name = "Rubrik sidhuvud",
+            Description = "Rubriken för sidhuvudet.",
+            GroupName = SystemTabNames.Content,
+            Order = 20)]
+        [CultureSpecific]
+        public virtual string? HeaderTitle { get; set; }
+
+        [Display(
+            Name = "Sidhuvud",
+            Description = "Sidhuvudets innehåll.",
+            GroupName = SystemTabNames.Content,
+            Order = 30)]
+        [CultureSpecific]
+        public virtual string? HeaderText { get; set; }
+
+        [Display(
+            Name = "Sidfot",
+            Description = "Sidfotens innehåll.",
+            GroupName = SystemTabNames.Content,
+            Order = 40)]
+        public virtual XhtmlString? FooterText { get; set; }
     }
 }
