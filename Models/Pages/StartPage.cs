@@ -44,5 +44,20 @@ namespace MartinsdalKommun.Models.Pages
             GroupName = SiteTabNames.Footer,
             Order = 40)]
         public virtual XhtmlString? FooterText { get; set; }
+
+        [Display(
+            Name = "Innehållsnod",
+            Description = "Välj nod som du vill hämta sidor som ska arkiveras från.",
+            GroupName = SystemTabNames.Content,
+            Order = 50)]
+        public virtual ContentReference? LandingPageRoot { get; set; }
+        //[ScaffoldColumn(false)]
+
+        [Display(
+            Name = "Arkivnod",
+            Description = "Välj nod som du vill arkivera sidor till.",
+            GroupName = SystemTabNames.Content,
+            Order = 60)]
+        public virtual ContentReference? ArchiveRoot { get; set; } 
     }
 }
