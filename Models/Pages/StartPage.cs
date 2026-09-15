@@ -14,8 +14,6 @@ namespace MartinsdalKommun.Models.Pages
         AvailableInEditMode = true)]
     public class StartPage : PageData
     {
-
-
         [Display(
             Name = "Innehållsområde",
             Description = "Innehållsområdet på startsidan.",
@@ -39,8 +37,7 @@ namespace MartinsdalKommun.Models.Pages
         [CultureSpecific]
         public virtual string? HeaderText { get; set; }
 
-
-        //[AllowedTypes(typeof(ImageFile))]
+        [AllowedTypes(typeof(ImageFile))]
         [Display
             (Name = "Logotyp",
             Description = "Logotypen som visas i sidhuvudet.",

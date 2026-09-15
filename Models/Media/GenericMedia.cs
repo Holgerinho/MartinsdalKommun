@@ -1,6 +1,6 @@
-﻿//namespace MartinsdalKommun.Models.Media
-//{
-//    public class GenericMedia : MediaData
-//    {
-//    }
-//}
+﻿namespace MartinsdalKommun.Models.Media
+{
+    public class GenericMedia : MediaData
+    {
+    }
+}
