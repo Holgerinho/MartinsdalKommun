@@ -37,7 +37,7 @@ namespace MartinsdalKommun.Models.Pages
         [CultureSpecific]
         public virtual string? HeaderText { get; set; }
 
-        [AllowedTypes(typeof(ImageFile))]
+        //[AllowedTypes(typeof(HeaderImageFile))]
         [Display
             (Name = "Logotyp",
             Description = "Logotypen som visas i sidhuvudet.",
