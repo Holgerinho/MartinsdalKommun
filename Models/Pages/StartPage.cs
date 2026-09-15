@@ -1,9 +1,8 @@
-using EPiServer.Core;
-using EPiServer.DataAbstraction;
-using EPiServer.DataAnnotations;
 using MartinsdalKommun.Infrastructure;
 using System.ComponentModel.DataAnnotations;
 using EPiServer.Web;
+using MartinsdalKommun.Models.Media;
+//using MartinsdalKommun.Models.Media;
 
 
 namespace MartinsdalKommun.Models.Pages
@@ -40,6 +39,8 @@ namespace MartinsdalKommun.Models.Pages
         [CultureSpecific]
         public virtual string? HeaderText { get; set; }
 
+
+        //[AllowedTypes(typeof(ImageFile))]
         [Display
             (Name = "Logotyp",
             Description = "Logotypen som visas i sidhuvudet.",
