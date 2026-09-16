@@ -13,8 +13,6 @@ namespace MartinsdalKommun.Models.Pages
         AvailableInEditMode = true)]
     public class StartPage : PageData
     {
-
-
         [Display(
             Name = "Innehållsområde",
             Description = "Innehållsområdet på startsidan.",
