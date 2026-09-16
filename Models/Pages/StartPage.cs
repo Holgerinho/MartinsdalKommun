@@ -1,8 +1,9 @@
-using EPiServer.Core;
-using EPiServer.DataAbstraction;
-using EPiServer.DataAnnotations;
 using MartinsdalKommun.Infrastructure;
 using System.ComponentModel.DataAnnotations;
+using EPiServer.Web;
+using MartinsdalKommun.Models.Media;
+//using MartinsdalKommun.Models.Media;
+
 
 namespace MartinsdalKommun.Models.Pages
 {
@@ -36,11 +37,20 @@ namespace MartinsdalKommun.Models.Pages
         [CultureSpecific]
         public virtual string? HeaderText { get; set; }
 
+        //[AllowedTypes(typeof(HeaderImageFile))]
+        [Display
+            (Name = "Logotyp",
+            Description = "Logotypen som visas i sidhuvudet.",
+            GroupName = SiteTabNames.Header,
+            Order = 40)]
+        [UIHint(UIHint.Image)]
+        public virtual ContentReference? Logo { get; set; }
+
         [Display(
             Name = "Sidfot",
             Description = "Sidfotens innehål.",
             GroupName = SiteTabNames.Footer,
-            Order = 40)]
+            Order = 50)]
         public virtual XhtmlString? FooterText { get; set; }
     }
 }

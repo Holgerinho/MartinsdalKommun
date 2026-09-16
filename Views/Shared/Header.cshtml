@@ -1,6 +1,12 @@
 ﻿@model StartPage
 
 <header>
+    @if (Model.Logo != null)
+    {
+        <img src="@Url.ContentUrl(Model.Logo)"
+          alt="Logotype"
+          class="header-logo" />
+    }
     <h1>@Html.PropertyFor(x => x.HeaderTitle)</h1>
     <p>@Html.PropertyFor(x => x.HeaderText)</p>
     
