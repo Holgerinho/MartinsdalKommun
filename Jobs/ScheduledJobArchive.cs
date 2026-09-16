@@ -28,7 +28,5 @@ namespace MartinsdalKommun.Jobs
         public override void Stop() {
             _stopSignaled = true;
         }
-
-
     }
 }
